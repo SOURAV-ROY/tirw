@@ -30,6 +30,47 @@ setInterval(() => {
         </h1>
     );
 
-    ReactDOM.render(element, document.getElementById('root'));
+    // ReactDOM.render(element, document.getElementById('root'));
 }, 1000);
-// ReactDOM.render(date, document.getElementById('root'));
+
+// function Clock({local}) {
+//     return (
+//         <h1>Hello, SOURAV {name}
+//             <span>Time Is {new Date().toLocaleString(local)} </span>
+//         </h1>
+//     );
+// }
+
+// class Clock extends React.Component {
+//     print() {
+//         return (
+//             <h1>Hello, SOURAV {name}
+//                 <span>Time Is {new Date().toLocaleString()} </span>
+//             </h1>
+//         );
+//     }
+// }
+
+// const ClockComponent = new Clock();
+
+class Clock extends React.Component {
+    render() {
+        return (
+            <h1>Hello, SOURAV {name} <i>{this.props.children}</i>
+                <span>Time Is {new Date().toLocaleString(this.props.local)} </span>
+            </h1>
+        );
+    }
+}
+
+// Function call *******************************************
+// ReactDOM.render(Clock(), document.getElementById('root'));
+
+// Function call by ***** HTML TAG ****************************************
+// ReactDOM.render(<Clock local="bn-BD"/>, document.getElementById('root'));
+
+// Class Component Call From Here *****************************************
+// ReactDOM.render(ClockComponent.print(), document.getElementById('root'));
+
+// React class Extends React Component *****************************************
+ReactDOM.render(<Clock local="bn-BD"> AWESOME </Clock>, document.getElementById('root'));
