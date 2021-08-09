@@ -16,10 +16,15 @@ class Button extends Component {
 
     render() {
         console.log('Button component render')
-        const {change, local} = this.props;
+        // const {change, local, show, enable} = this.props;
+        const {change, local, show} = this.props;
+        // if (!enable) return null;
         return (
             <div>
-                <button type='button' onClick={() => change(local)}>Click Here</button>
+                <button type='button' onClick={() => change(local)}>
+                    {local === 'bn-BD' ? 'Change Clock' : 'ঘড়ি পরিবর্তন করুন'}
+                </button>
+                {show && <p>Hello</p>}
             </div>
         );
     }

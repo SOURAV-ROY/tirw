@@ -50,6 +50,13 @@ class Clock extends Component {
         console.log('Clock component render');
         const {date, local} = this.state;
         // const {local} = this.props;
+        let button;
+        if (local === 'bn-BD') {
+            button = (<Button change={this.handleClick} local='en-US'/>)
+        } else {
+            button = (<Button change={this.handleClick} local='bn-BD'/>)
+        }
+
         return (
             <div>
                 <h1 className='heading'>
@@ -63,7 +70,12 @@ class Clock extends Component {
                     {/*<button onClick={this.handleClick}>Click Here</button>*/}
                     {/*<button onClick={this.handleClick.bind(this, 'en-US')}>Click Here</button>*/}
                     {/*<button onClick={() => this.handleClick('en-US')}>Click Here</button>*/}
-                    <Button change={this.handleClick} local='en-US'>Click Here</Button>
+                    {/*<Button change={this.handleClick} local='en-US'/>*/}
+                    {button}
+                    {local === 'bn-BD'
+                        ? (<Button change={this.handleClick} local='en-US' show={false} enable={false}/>)
+                        : (<Button change={this.handleClick} local='bn-BD' show={true} enable/>)
+                    }
                 </h1>
             </div>
         )
