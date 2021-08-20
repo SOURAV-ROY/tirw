@@ -1,9 +1,8 @@
 import './App.css';
-// import Clock from "./components/Clock";
-import ClockList from "./components/ClockList";
-// import Form from "./components/Form";
-import Calculator from "./components/Calculator";
-
+// import Clock from "./components/Clock/Clock";
+import ClockList from "./components/Clock/ClockList";
+// import Form from "./components/Form/Form";
+import Calculator from "./components/Temperature/Calculator";
 function App() {
     console.log('App component render');
     const quantities = [1];
