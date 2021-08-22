@@ -1,5 +1,5 @@
 import React from 'react';
-import withCounter from './withCounter';
+import withCounter from './hoc/withCounter';
 
 function HoverCounter(props) {
     const {count, incrementCount} = props;

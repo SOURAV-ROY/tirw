@@ -8,9 +8,9 @@ import Text from "./components/Composition/Text";
 import Emoji from "./components/Composition/AddEmoji";
 import Bracket from "./components/Composition/AddBracket";
 // import ClickCounter from "./HOC/ClickCounter";
-import ClickCounter from "./HOC/hoc/ClickCounter";
+import ClickCounter from "./HOC/ClickAndHoverCounter/ClickCounter";
 // import MouseOver from "./HOC/MouseOver";
-import HoverCounter from "./HOC/hoc/HoverCounter";
+import HoverCounter from "./HOC/ClickAndHoverCounter/HoverCounter";
 
 function App() {
     console.log('App component render');
