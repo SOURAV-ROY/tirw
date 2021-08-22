@@ -6,7 +6,11 @@ import ClockList from "./components/Clock/ClockList";
 // import Text from "./components/Inheritance/Text";
 import Text from "./components/Composition/Text";
 import Emoji from "./components/Composition/AddEmoji";
-import AddBracket from "./components/Composition/AddBracket";
+import Bracket from "./components/Composition/AddBracket";
+// import ClickCounter from "./HOC/ClickCounter";
+import ClickCounter from "./HOC/hoc/ClickCounter";
+// import MouseOver from "./HOC/MouseOver";
+import HoverCounter from "./HOC/hoc/HoverCounter";
 
 function App() {
     console.log('App component render');
@@ -28,11 +32,14 @@ function App() {
             {/*</AddEmoji>*/}
             <Emoji>
                 {({addEmoji}) => (
-                    <AddBracket>
+                    <Bracket>
                         {({addBracket}) => <Text addEmoji={addEmoji} addBracket={addBracket}/>}
-                    </AddBracket>
+                    </Bracket>
                 )}
             </Emoji>
+            <hr/>
+            <ClickCounter/>
+            <HoverCounter/>
         </div>
     );
 }
