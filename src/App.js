@@ -4,13 +4,21 @@ import ClockList from "./components/Clock/ClockList";
 // import Form from "./components/Form/Form";
 // import Calculator from "./components/Temperature/Calculator";
 // import Text from "./components/Inheritance/Text";
+
 import Text from "./components/Composition/Text";
 import Emoji from "./components/Composition/AddEmoji";
 import Bracket from "./components/Composition/AddBracket";
+
+// HOC Component is here because it is used
 // import ClickCounter from "./HOC/ClickCounter";
-import ClickCounter from "./HOC/ClickAndHoverCounter/ClickCounter";
+// import ClickCounter from "./HOC/ClickAndHoverCounter/ClickCounter";
 // import MouseOver from "./HOC/MouseOver";
-import HoverCounter from "./HOC/ClickAndHoverCounter/HoverCounter";
+// import HoverCounter from "./HOC/ClickAndHoverCounter/HoverCounter";
+
+import User from "./components/User/User";
+import Counter from "./components/Counter/Counter";
+import ClickCounter from "./components/Counter/ClickCounter";
+import HoverCounter from "./components/Counter/HoverCounter";
 
 function App() {
     console.log('App component render');
@@ -38,8 +46,28 @@ function App() {
                 )}
             </Emoji>
             <hr/>
-            <ClickCounter/>
-            <HoverCounter/>
+            {/*<ClickCounter/>*/}
+            {/*<MouseOver/>*/}
+            {/*<HoverCounter/>*/}
+            {/*<User name="Sourav Roy"/>*/}
+            {/*<User name={() => 'SOURAV ROY'}/>*/}
+            <User name={(isLoggedIn) => (isLoggedIn ? 'SOURAV ROY' : 'Guest')}/>
+
+            {/*<Counter>*/}
+            {/*    {(counter, incrementCount) => (*/}
+            {/*        <ClickCounter count={counter} incrementCount={incrementCount}/>*/}
+            {/*    )}*/}
+            {/*</Counter>*/}
+            <Counter
+                render={(counter, incrementCount) => (
+                    <ClickCounter count={counter} incrementCount={incrementCount}/>
+                )}
+            />
+            <Counter
+                render={(counter, incrementCount) => (
+                    <HoverCounter count={counter} incrementCount={incrementCount}/>
+                )}
+            />
         </div>
     );
 }
