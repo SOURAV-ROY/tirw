@@ -1,23 +1,23 @@
 import './App.css'
 /**
-// import Clock from "./components/Clock/Clock";
-import ClockList from "./components/Clock/ClockList";
-// import Form from "./components/Form/Form";
-// import Calculator from "./components/Temperature/Calculator";
-// import Text from "./components/Inheritance/Text";
+ // import Clock from "./components/Clock/Clock";
+ import ClockList from "./components/Clock/ClockList";
+ // import Form from "./components/Form/Form";
+ // import Calculator from "./components/Temperature/Calculator";
+ // import Text from "./components/Inheritance/Text";
 
-import Text from "./components/Composition/Text";
-import Emoji from "./components/Composition/AddEmoji";
-import Bracket from "./components/Composition/AddBracket";
+ import Text from "./components/Composition/Text";
+ import Emoji from "./components/Composition/AddEmoji";
+ import Bracket from "./components/Composition/AddBracket";
 
-// HOC Component is here because it is used
-// import ClickCounter from "./HOC/ClickCounter";
-// import ClickCounter from "./HOC/ClickAndHoverCounter/ClickCounter";
-// import MouseOver from "./HOC/MouseOver";
-// import HoverCounter from "./HOC/ClickAndHoverCounter/HoverCounter";
+ // HOC Component is here because it is used
+ // import ClickCounter from "./HOC/ClickCounter";
+ // import ClickCounter from "./HOC/ClickAndHoverCounter/ClickCounter";
+ // import MouseOver from "./HOC/MouseOver";
+ // import HoverCounter from "./HOC/ClickAndHoverCounter/HoverCounter";
 
-import User from "./components/User/User";
-*/
+ import User from "./components/User/User";
+ */
 import Counter from "./components/Counter/Counter";
 import ClickCounter from "./components/Counter/ClickCounter";
 // import HoverCounter from "./components/Counter/HoverCounter";
@@ -79,11 +79,41 @@ import ThemeContext from "./contexts/ThemeContext";
 
 class App extends Component {
     state = {
-        theme: 'dark'
+        theme: 'dark',
+
+        switchTheme: () => {
+            this.setState(({theme}) => {
+
+                if (theme === 'dark') {
+                    return {
+                        theme: 'light',
+                    }
+                } else {
+                    return {
+                        theme: 'dark',
+                    }
+                }
+            })
+        }
     }
 
+    // switchTheme = () => {
+    //     this.setState(({theme}) => {
+    //
+    //         if (theme === 'dark') {
+    //             return {
+    //                 theme: 'light',
+    //             }
+    //         } else {
+    //             return {
+    //                 theme: 'dark',
+    //             }
+    //         }
+    //     })
+    // }
+
     render() {
-        const {theme} = this.state;
+        const {theme, switchTheme} = this.state;
         return (
             <div className="App">
                 <Counter
@@ -91,10 +121,18 @@ class App extends Component {
                         <ClickCounter count={counter} incrementCount={incrementCount}/>
                     )}
                 />
-                <ThemeContext.Provider value={{theme}}>
+
+                {/*<ThemeContext.Provider value={{theme, switchTheme: this.switchTheme}}>*/}
+                {/*    /!*<Section theme={theme}/>*!/*/}
+                {/*    <Section/>*/}
+                {/*</ThemeContext.Provider>*/}
+
+                {/*<ThemeContext.Provider value={this.state}>*/}
+                <ThemeContext.Provider value={{theme, switchTheme}}>
                     {/*<Section theme={theme}/>*/}
                     <Section/>
                 </ThemeContext.Provider>
+
             </div>
         );
     }

@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import HoverCounter from "../HoverCounter";
 import Counter from "../Counter";
 import ThemeContext from "../../../contexts/ThemeContext";
 
 function Content() {
+
+    const context = useContext(ThemeContext);
+    const {theme, switchTheme} = context;
+
+    console.log(context);
+    console.log('Content rendered');
+
     return (
         <div>
             <h1>This is content component</h1>
@@ -14,15 +21,26 @@ function Content() {
             {/*/>*/}
             <Counter
                 render={(counter, incrementCount) => (
-                    <ThemeContext.Consumer>
-                        {({theme}) => <HoverCounter
-                            count={counter}
-                            incrementCount={incrementCount}
-                            theme={theme}
-                        />}
-                    </ThemeContext.Consumer>
+                    <HoverCounter
+                        count={counter}
+                        incrementCount={incrementCount}
+                        theme={theme}
+                        switchTheme={switchTheme}
+                    />
                 )}
             />
+            {/*<Counter*/}
+            {/*    render={(counter, incrementCount) => (*/}
+            {/*        <ThemeContext.Consumer>*/}
+            {/*            {({theme, switchTheme}) => <HoverCounter*/}
+            {/*                count={counter}*/}
+            {/*                incrementCount={incrementCount}*/}
+            {/*                theme={theme}*/}
+            {/*                switchTheme={switchTheme}*/}
+            {/*            />}*/}
+            {/*        </ThemeContext.Consumer>*/}
+            {/*    )}*/}
+            {/*/>*/}
         </div>
     );
 }
