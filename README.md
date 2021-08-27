@@ -1,70 +1,15 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Think In React Way #
+### :heavy_check_mark: [React JSX Element & Rendering Elements](https://github.com/SOURAV-ROY/tirw/commit/9498bef57bfc27f1fe9cd31143ebd44f11d7e5bf)
+### :heavy_check_mark: [React Components and Props Core Concept](https://github.com/SOURAV-ROY/tirw/commit/eeeefed3f143c42e10ca4a9db853d7d2f18a65b8)
+### :heavy_check_mark: [React State & Lifecycle in Class Component](https://github.com/SOURAV-ROY/tirw/commit/81beabcda8666ae9a40e0f8f1aa8c7b4ca3c8154)
+### :heavy_check_mark: [React Event Handling & Control Re Rendering](https://github.com/SOURAV-ROY/tirw/commit/4f868ed821e0878d08cb96ec0dcfc783d5a27f6a)
+### :heavy_check_mark: [React Conditional Rendering, List and Keys](https://github.com/SOURAV-ROY/tirw/commit/e254061d8d22442695f3cb73ae41344faad014c6)
+### :heavy_check_mark: [React Form Handling - Controlled vs Uncontrolled Component](https://github.com/SOURAV-ROY/tirw/commit/a4bb1fdd06c75ffc8c3577511714cb067dbf5495)
+### :heavy_check_mark: [React Lifting State Up - Only depend on Celsius Not Fahrenheit](https://github.com/SOURAV-ROY/tirw/commit/2d68c474f35ca3b2081de5560a0158f752c99b81)
+### :heavy_check_mark: [React Composition vs Inheritance](https://github.com/SOURAV-ROY/tirw/commit/792b0013222810072a5b3f488857d09f0f5fd405)
+### :heavy_check_mark: [React Higher Order Components (HOC)](https://github.com/SOURAV-ROY/tirw/commit/c8a8ed4c32674586860d81527f12dd3a86569596)
+### :heavy_check_mark: [React Render Props](https://github.com/SOURAV-ROY/tirw/commit/d5e752973ca7eda805bf7470a05d186a713f6fbf)
+### :heavy_check_mark: [React Context API - How to use React Context API](https://github.com/SOURAV-ROY/tirw/commit/d87a4976fbaa2eceaeb199ae17898a560d90cd4c)
+### :heavy_check_mark: [React Context API - contextType & useContext hook](https://github.com/SOURAV-ROY/tirw/commit/407728bbcefe09b84fcb8427762dbbc95f29897b)
+## Hooks ##
+:white_check_mark: [useState]()
