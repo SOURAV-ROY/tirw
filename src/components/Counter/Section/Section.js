@@ -3,7 +3,7 @@ import Content from "./Content";
 
 class Section extends Component {
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        return true;
+        return false;
     }
 
     render() {
