@@ -11,6 +11,60 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
+/*****************************************************
+ let states = [];
+ let stateIndex = -1;
+
+ function useState(defaultValue) {
+    const index = ++stateIndex;
+    if (states[index]) return states[index];
+
+    const setValue = (newValue) => {
+        states[index][0] = newValue;
+        renderWithS4V();
+    }
+
+    const returnArray = [defaultValue, setValue];
+    states[index] = returnArray;
+    return returnArray;
+}
+
+ const Todo = () => {
+    const [todo, setTodo] = useState('');
+    const [warning, setWarning] = useState(null);
+
+    const handleInput = (e) => {
+        const inputValue = e.target.value;
+        const warningShow = inputValue.includes('.js')
+            ? 'You need to *JS* Func skill to complete the task'
+            : null;
+
+        setTodo(inputValue);
+        setWarning(warningShow);
+    };
+    return (
+        <div>
+            <p>{todo}</p>
+            <p><textarea name='todo' onChange={handleInput} rows='5' cols='100'/></p>
+            <hr/>
+            <h3>{warning || 'Good Choice'}</h3>
+        </div>
+    );
+};
+
+ function renderWithS4V() {
+    stateIndex = -1;
+
+    ReactDOM.render(
+        <React.StrictMode>
+            <Todo/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+ renderWithS4V();
+ ***********************************************************/
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

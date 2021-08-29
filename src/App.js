@@ -25,6 +25,12 @@ import {Component} from "react";
 import Section from "./components/Counter/Section/Section";
 import ThemeContext from "./contexts/ThemeContext";
 
+// React Hooks
+import TodoClass from "./components/TodoClass/TodoClass";
+import Todo from "./components/TodoClass/Todo";
+import TodoObject from "./components/TodoClass/TodoObject";
+import CounterCount from "./components/TodoClass/CounterCount";
+
 // function App() {
 //     console.log('App component render');
 //     const quantities = [1];
@@ -132,7 +138,13 @@ class App extends Component {
                     {/*<Section theme={theme}/>*/}
                     <Section/>
                 </ThemeContext.Provider>
-
+                <TodoClass/>
+                <hr/>
+                <Todo/>
+                <hr/>
+                <TodoObject/>
+                <CounterCount/>
+                <hr/>
             </div>
         );
     }
