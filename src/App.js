@@ -40,15 +40,46 @@ import User from "./components/User/User";
 
 // import MyClassComponent from "./components/UseEffectHook/MyClassComponent";
 import MyFunComponent from "./components/UseEffectHook/MyFunComponent";
-import {useState} from "react";
+import {useState, useCallback, useMemo} from "react";
+
+// MemoCallback Here ****************************
+import Title from "./components/MemoCallback/Title";
+import ShowCount from "./components/MemoCallback/ShowCount";
+import Button from "./components/MemoCallback/Button";
 
 function App() {
     console.log('App component render');
     // const quantities = [1,2,3];
     const [show, setShow] = useState(true);
+
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
+
+    const incrementByOne = useCallback(() => {
+        setCount1((prevCount) => prevCount + 1)
+    }, []);
+
+    const incrementByFive = useCallback(() => {
+        setCount2((prevCount) => prevCount + 5)
+    }, []);
+
+    const isEvenOrFalse = useMemo(() => {
+        let i = 0;
+        while (i < 1000000000) i += 1;
+        return count1 % 2 === 0;
+    }, [count1])
+
     return (
         <div className="App">
-            <h1>Hello Sourav</h1>
+
+            <Title/>
+            <ShowCount count={count1} title='Count 1'/>
+            <span>{isEvenOrFalse ? 'Even' : 'Odd'}</span>
+            <Button handleClick={incrementByOne}>Increment By One</Button>
+            <ShowCount count={count2} title='Count 2'/>
+            <Button handleClick={incrementByFive}>Increment By Five</Button>
+            <hr/>
+
             {/*<Clock local='bn-BD'/>*/}
             {/*<Clock/>*/}
             {/*<ClockList quantities={quantities}/>*/}
