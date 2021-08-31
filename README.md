@@ -28,3 +28,4 @@
 
 💚 [useState](https://github.com/SOURAV-ROY/tirw/commit/829ebf1926bd1319bbd4186ed141f09d30b6b759)
 💚 [useEffect](https://github.com/SOURAV-ROY/tirw/commit/085fd1f1eb44f009601b5b97bcfbbc2efacb0d86)
+💚 [useCallback & useMemo](https://github.com/SOURAV-ROY/tirw/commit/7f3ee14c7d64c646a3983b4bb5283b3daea962b4)
