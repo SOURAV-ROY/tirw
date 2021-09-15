@@ -46,6 +46,8 @@ import {useState, useCallback, useMemo} from "react";
 import Title from "./components/MemoCallback/Title";
 import ShowCount from "./components/MemoCallback/ShowCount";
 import Button from "./components/MemoCallback/Button";
+import Form from "./components/UseREF/Form";
+import Time from "./components/UseREF/Time";
 
 function App() {
     console.log('App component render');
@@ -64,8 +66,8 @@ function App() {
     }, []);
 
     const isEvenOrFalse = useMemo(() => {
-        let i = 0;
-        while (i < 1000000000) i += 1;
+        // let i = 0;
+        // while (i < 1000000000) i += 1;
         return count1 % 2 === 0;
     }, [count1])
 
@@ -130,6 +132,8 @@ function App() {
             <button type='button' onClick={() => setShow((prevShow) => !prevShow)}>
                 {show ? 'Hide Post' : 'Show Post'}
             </button>
+            <Form/>
+            <Time/>
         </div>
     );
 }
