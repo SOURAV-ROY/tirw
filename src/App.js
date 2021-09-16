@@ -16,7 +16,7 @@ import Bracket from "./components/Composition/AddBracket";
 // import MouseOver from "./HOC/MouseOver";
 // import HoverCounter from "./HOC/ClickAndHoverCounter/HoverCounter";
 
-import User from "./components/User/User";
+// import User from "./components/User/User";
 
 /**
  import Counter from "./components/Counter/Counter";
@@ -39,8 +39,8 @@ import User from "./components/User/User";
  */
 
 // import MyClassComponent from "./components/UseEffectHook/MyClassComponent";
-import MyFunComponent from "./components/UseEffectHook/MyFunComponent";
-import {useState, useCallback, useMemo} from "react";
+// import MyFunComponent from "./components/UseEffectHook/MyFunComponent";
+import {useState, useCallback, useMemo, useReducer, createContext} from "react";
 
 // MemoCallback Here ****************************
 import Title from "./components/MemoCallback/Title";
@@ -48,14 +48,36 @@ import ShowCount from "./components/MemoCallback/ShowCount";
 import Button from "./components/MemoCallback/Button";
 import Form from "./components/UseREF/Form";
 import Time from "./components/UseREF/Time";
+// import Counter from "./components/UseReducer/Counter";
+// import ComplexCounter from "./components/UseReducer/ComplexCounter";
+// import CounterThree from "./components/UseReducer/CounterThree";
+import ComponentA from "./components/UseReducer/ComponentA";
+import GetPostUseState from "./components/UseReducer/GetPostUseState";
+import GetPostUseReducer from "./components/UseReducer/GetPostUseReducer";
+
+export const counterContext = createContext();
+
+const initialState = 2121;
+const reducer = (state, action) => {
+    switch (action) {
+        case 'increment':
+            return state + 1;
+        case 'decrement':
+            return state - 1;
+        default:
+            return state;
+    }
+};
 
 function App() {
     console.log('App component render');
     // const quantities = [1,2,3];
-    const [show, setShow] = useState(true);
+    // const [show, setShow] = useState(true);
 
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
+
+    const [count, dispatch] = useReducer(reducer, initialState);
 
     const incrementByOne = useCallback(() => {
         setCount1((prevCount) => prevCount + 1)
@@ -82,6 +104,19 @@ function App() {
             <Button handleClick={incrementByFive}>Increment By Five</Button>
             <hr/>
 
+            {/*<Counter/>*/}
+            {/*<ComplexCounter/>*/}
+            {/*<hr/>*/}
+            {/*<CounterThree/>*/}
+            {/*<hr/>*/}
+            <div>AppCount : {count}</div>
+            <counterContext.Provider value={{countDispatch: dispatch}}>
+                <ComponentA/>
+            </counterContext.Provider>
+            <GetPostUseState/>
+            <GetPostUseReducer/>
+            <hr/>
+
             {/*<Clock local='bn-BD'/>*/}
             {/*<Clock/>*/}
             {/*<ClockList quantities={quantities}/>*/}
@@ -94,6 +129,7 @@ function App() {
             {/*<AddEmoji>*/}
             {/*    {({addEmoji}) => <Text addEmoji={addEmoji}/>}*/}
             {/*</AddEmoji>*/}
+
             <Emoji>
                 {({addEmoji}) => (
                     <Bracket>
@@ -102,12 +138,14 @@ function App() {
                 )}
             </Emoji>
             <hr/>
+
             {/*<ClickCounter/>*/}
             {/*<MouseOver/>*/}
             {/*<HoverCounter/>*/}
             {/*<User name="Sourav Roy"/>*/}
             {/*<User name={() => 'SOURAV ROY'}/>*/}
-            <User name={(isLoggedIn) => (isLoggedIn ? 'SOURAV ROY' : 'Guest')}/>
+
+            {/*<User name={(isLoggedIn) => (isLoggedIn ? 'SOURAV ROY' : 'Guest')}/>*/}
 
             {/*<Counter>*/}
             {/*    {(counter, incrementCount) => (*/}
@@ -125,15 +163,20 @@ function App() {
             {/*        <HoverCounter count={counter} incrementCount={incrementCount}/>*/}
             {/*    )}*/}
             {/*/>*/}
-            <div>
-                {/*{show && <MyClassComponent/>}*/}
-                {show && <MyFunComponent/>}
-            </div>
-            <button type='button' onClick={() => setShow((prevShow) => !prevShow)}>
-                {show ? 'Hide Post' : 'Show Post'}
-            </button>
+
+            {/*<div>*/}
+            {/*    /!*{show && <MyClassComponent/>}*!/*/}
+            {/*    {show && <MyFunComponent/>}*/}
+            {/*</div>*/}
+
+            {/*<button type='button' onClick={() => setShow((prevShow) => !prevShow)}>*/}
+            {/*    {show ? 'Hide Post' : 'Show Post'}*/}
+            {/*</button>*/}
+            {/*<hr/>*/}
+
             <Form/>
             <Time/>
+            <hr/>
         </div>
     );
 }
