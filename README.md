@@ -31,3 +31,4 @@
 💚 [useCallback & useMemo](https://github.com/SOURAV-ROY/tirw/commit/7f3ee14c7d64c646a3983b4bb5283b3daea962b4)
 💚 [useRef](https://github.com/SOURAV-ROY/tirw/commit/e3f3be0806ede30a4f03fbe0fe1a4ada480d3d31)
 💚 [useReducer](https://github.com/SOURAV-ROY/tirw/commit/a4490ba1662a306fae9035e8a8ddf58208a23d4b)
+💚 [CustomHook](https://github.com/SOURAV-ROY/tirw/commit/48d79030a8ee5c7c0cf8e4f9e8f1b2ea7106c8ea)
