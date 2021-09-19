@@ -32,3 +32,5 @@
 💚 [useRef](https://github.com/SOURAV-ROY/tirw/commit/e3f3be0806ede30a4f03fbe0fe1a4ada480d3d31)
 💚 [useReducer](https://github.com/SOURAV-ROY/tirw/commit/a4490ba1662a306fae9035e8a8ddf58208a23d4b)
 💚 [CustomHook](https://github.com/SOURAV-ROY/tirw/commit/48d79030a8ee5c7c0cf8e4f9e8f1b2ea7106c8ea)
+
+#### [:heavy_check_mark:] [Stylesheets Inline Style & CSS Modules](https://github.com/SOURAV-ROY/tirw/commit/aaa70d3d67b21d31fbac7c49c8a9c806f762fd30)
