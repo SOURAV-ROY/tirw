@@ -1,7 +1,9 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
+import './components/Assets/css/global.css'
 import LayoutComponentOne from "./components/CustomHook/LayoutComponentOne";
 import LayoutComponentTwo from "./components/CustomHook/LayoutComponentTwo";
+import Logo from "./components/Logo/Logo";
 
 function AppUpdate() {
     // console.log(window.innerWidth);
@@ -10,6 +12,7 @@ function AppUpdate() {
         <div className="App">
             <LayoutComponentOne/>
             <LayoutComponentTwo/>
+            <Logo/>
         </div>
     );
 }
