@@ -34,3 +34,5 @@
 💚 [CustomHook](https://github.com/SOURAV-ROY/tirw/commit/48d79030a8ee5c7c0cf8e4f9e8f1b2ea7106c8ea)
 
 #### [:heavy_check_mark:] [Stylesheets Inline Style & CSS Modules](https://github.com/SOURAV-ROY/tirw/commit/aaa70d3d67b21d31fbac7c49c8a9c806f762fd30)
+
+#### [:heavy_check_mark:] [React Styled Components](https://github.com/SOURAV-ROY/tirw/commit/85727323c9c49d449539ce3c7f04c68ec26d589b)
