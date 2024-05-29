@@ -4,6 +4,10 @@
 
 #### [:heavy_check_mark:] [React Components and Props Core Concept](https://github.com/SOURAV-ROY/tirw/commit/eeeefed3f143c42e10ca4a9db853d7d2f18a65b8)
 
+- [x] **[React JSX Element & Rendering Elements](https://github.com/SOURAV-ROY/tirw/commit/9498bef57bfc27f1fe9cd31143ebd44f11d7e5bf)**
+
+- [x] **[React Components and Props Core Concept](https://github.com/SOURAV-ROY/tirw/commit/eeeefed3f143c42e10ca4a9db853d7d2f18a65b8)**
+
 #### [:heavy_check_mark:] [React State & Lifecycle in Class Component](https://github.com/SOURAV-ROY/tirw/commit/81beabcda8666ae9a40e0f8f1aa8c7b4ca3c8154)
 
 #### [:heavy_check_mark:] [React Event Handling & Control Re Rendering](https://github.com/SOURAV-ROY/tirw/commit/4f868ed821e0878d08cb96ec0dcfc783d5a27f6a)
